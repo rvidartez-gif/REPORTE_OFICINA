@@ -2334,5 +2334,13 @@ function llFilterModalCat(btn, cat){
 }
 
 initResumen();done.resumen=true;
-
+<script>
+    // Desactiva el clic derecho
+    document.addEventListener('contextmenu', event => event.preventDefault()); 
+    
+    // Desactiva el atajo de copiar
+    document.addEventListener('copy', event => {
+        event.preventDefault(); 
+    });
+</script>
 </script></body></html>
