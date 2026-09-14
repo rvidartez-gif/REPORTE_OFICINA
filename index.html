@@ -8,6 +8,24 @@
     document.addEventListener('contextmenu', event => event.preventDefault()); 
     document.addEventListener('copy', event => event.preventDefault());
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Define el tiempo en milisegundos (10000 = 10 segundos)
+        const tiempoRotacion = 10000; 
+        
+        let tabIndex = 0;
+        // Selecciona todos los botones de las pestañas
+        const botonesTabs = document.querySelectorAll('.nav .nb');
+
+        if (botonesTabs.length > 0) {
+            setInterval(() => {
+                // Avanza al siguiente índice y vuelve al inicio si llega al final
+                tabIndex = (tabIndex + 1) % botonesTabs.length;
+                botonesTabs[tabIndex].click(); // Simula el clic
+            }, tiempoRotacion);
+        }
+    });
+</script>
 <style>
 :root{--jh-yellow:#FFB901;--jh-dark:#1A1A1A;--bg:#f5f6f7;--text:#1f2937;--muted:#4b5563;--dim:#9ca3af;--bord:#e5e7eb;
 --pending:#E30613;--gest:#d97706;--ok:#16a34a;--int:#16a34a;--ext:#2563eb;
