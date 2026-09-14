@@ -4,12 +4,16 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault()); 
+    document.addEventListener('copy', event => event.preventDefault());
+</script>
 <style>
 :root{--jh-yellow:#FFB901;--jh-dark:#1A1A1A;--bg:#f5f6f7;--text:#1f2937;--muted:#4b5563;--dim:#9ca3af;--bord:#e5e7eb;
 --pending:#E30613;--gest:#d97706;--ok:#16a34a;--int:#16a34a;--ext:#2563eb;
 --sans:'Plus Jakarta Sans',sans-serif;--mono:'IBM Plex Mono',monospace}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);font-family:var(--sans);color:var(--text);padding:1.1rem;font-size:14px}
+body{background:var(--bg);font-family:var(--sans);color:var(--text);padding:1.1rem;font-size:14px;-webkit-user-select:none;-ms-user-select:none;user-select:none;}
 .page{max-width:1240px;margin:0 auto}
 .hdr{background:linear-gradient(120deg,var(--jh-dark),#2d2d2d);border-radius:16px;padding:1.3rem 1.5rem;margin-bottom:1rem;color:#fff;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .hdr-l{display:flex;align-items:center;gap:1rem}
